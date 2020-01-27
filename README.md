@@ -1,6 +1,4 @@
-# Javascrit Front-end to BookStore Web API
-
-## Git Branch - Frontend
+# Javascript Front-end to BookStore Web API
 
 This Javascript frontend is developed with bootstrap to demonstrate crud operations of BookStore Web API that was written in asp.net core 3.1 using Entity Framework Core 3.1 with Sql Server as backend.
 
