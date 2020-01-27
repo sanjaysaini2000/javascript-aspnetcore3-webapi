@@ -55,6 +55,8 @@ Run the following command to run the app in the command window.
 dotnet run
 ```
 
+Now navigate to http://localhost:5001 to launch the application in browser.
+
 ## Built With
 
 - [.Net Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) - The .Net Core framework used
