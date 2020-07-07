@@ -26,16 +26,9 @@ Now run following commands.
 dotnet tool install --global dotnet-ef
 ```
 
-### Create the database
+### Pre-run Ckeck
 
-- First, check if your local sql server name is "(localdb)\mssqllocaldb" than you dont have do anything otherwise goto ConfigureServices method in Startup.cs and change the sql server appropriately.
-
-- Second, we need to apply “initialCreate” migration on the database so it will create new database.
-  So run following command to apply the migration to the database.
-
-```
-dotnet ef database update
-```
+Check if your local sql server name is "(localdb)\mssqllocaldb" than you dont have do anything otherwise goto ConfigureServices method in Startup.cs and change the sql server appropriately.
 
 Our Web API will listening at HTTPS so we need to create and trust the development certificate so that web API hosts securely on local development server when we run the project.
 
@@ -53,7 +46,13 @@ Run the following command to run the app in the command window.
 dotnet run
 ```
 
-Now navigate to http://localhost:5001 to launch the application in browser.
+Now navigate to http://localhost:5000 to launch the application in browser.
+
+Check out my [article](https://sanjaysaini.tech/category/software-development/web-deployment/javascript/) on how to create this app.
+
+## Docker Support
+
+Docker image of this API is available at my docker Hub registory. You can pull the image from [javascript-aspnetcorewebapi](https://hub.docker.com/repository/docker/sanjaysaini2000/javascript-aspnetcorewebapi) repository.
 
 ## Built With
 
