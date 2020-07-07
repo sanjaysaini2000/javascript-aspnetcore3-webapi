@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  sql-db:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_PID: 'Express'
+      SA_PASSWORD: 'Passw0rd123'
+    ports:
+      - '1433:1433'
+
+  js-client:
+    build: .
+    image: sanjaysaini2000/javascript-aspnetcorewebapi
+    environment:
+      DBServer: 'sql-db'
+      SA_Password: 'Passw0rd123'
+      Database: 'BookStore'
+    restart: always
+    ports:
+      - '8000:80'
+    depends_on:
+      - sql-db
